@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .quiz {
+            margin: 20px 0;
+        }
+
+        .question {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .option {
+            padding: 5px;
+            margin: 5px 0;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.2s;
+        }
+
+        .option:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz App</h1>
+
+        <!-- Question 1 -->
+        <div class="quiz">
+            <div class="question">1. Which gas do plants release during photosynthesis?</div>
+            <div class="options">
+                <div class="option" onclick="checkAnswer(1, 0)">A. Oxygen</div>
+                <div class="option" onclick="checkAnswer(1, 1)">B. Carbon Dioxide</div>
+                <div class="option" onclick="checkAnswer(1, 0)">C. Nitrogen</div>
+                <div class="option" onclick="checkAnswer(1, 0)">D. Hydrogen</div>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="quiz">
+            <div class="question">2. Who painted the Mona Lisa?</div>
+            <div class="options">
+                <div class="option" onclick="checkAnswer(2, 0)">A. Vincent van Gogh</div>
+                <div class="option" onclick="checkAnswer(2, 1)">B. Leonardo da Vinci</div>
+                <div class="option" onclick="checkAnswer(2, 0)">C. Pablo Picasso</div>
+                <div class="option" onclick="checkAnswer(2, 0)">D. Rembrandt</div>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="quiz">
+            <div class="question">3. Which gas is responsible for the Earth's ozone layer?</div>
+            <div class="options">
+                <div class="option" onclick="checkAnswer(3, 0)">A. Oxygen</div>
+                <div class="option" onclick="checkAnswer(3, 1)">B. Ozone</div>
+                <div class="option" onclick="checkAnswer(3, 0)">C. Carbon Dioxide</div>
+                <div class="option" onclick="checkAnswer(3, 0)">D. Methane</div>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="quiz">
+            <div class="question">4. Which of the following is not a primary color in painting?</div>
+            <div class="options">
+                <div class="option" onclick="checkAnswer(4, 0)">A. Red</div>
+                <div class="option" onclick="checkAnswer(4, 0)">B. Yellow</div>
+                <div class="option" onclick="checkAnswer(4, 0)">C. Bluen</div>
+                <div class="option" onclick="checkAnswer(4, 1)">D. Green</div>
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="quiz">
+            <div class="question">5. What is the largest planet in our solar system?</div>
+            <div class="options">
+                <div class="option" onclick="checkAnswer(5, 0)">A. Earth</div>
+                <div class="option" onclick="checkAnswer(5, 0)">B. Mars</div>
+                <div class="option" onclick="checkAnswer(5, 1)">C. Jupiter</div>
+                <div class="option" onclick="checkAnswer(5, 0)">D. Venus</div>
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="quiz">
+            <div class="question">6. Which gas do plants absorb from the atmosphere?</div>
+            <div class="options">
+                <div class="option" onclick="checkAnswer(6, 0)">A. Oxygen</div>
+                <div class="option" onclick="checkAnswer(6, 0)">B. Carbon Dioxide</div>
+                <div class="option" onclick="checkAnswer(6, 1)">C. Nitrogen</div>
+                <div class="option" onclick="checkAnswer(6, 0)">D. Hydrogen</div>
+            </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="quiz">
+            <div class="question">7. Which planet is known as the "Morning Star" or "Evening Star"?</div>
+            <div class="options">
+                <div class="option" onclick="checkAnswer(7, 0)">A. Venus</div>
+                <div class="option" onclick="checkAnswer(7, 1)">B. Mercury</div>
+                <div class="option" onclick="checkAnswer(7, 0)">C. Mars</div>
+                <div class="option" onclick="checkAnswer(7, 0)">D. Jupiter</div>
+            </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="quiz">
+            <div class="question">8. Who is known as the father of modern physics?</div>
+            <div class="options">
+                <div class="option" onclick="checkAnswer(8, 0)">A. Isaac Newton</div>
+                <div class="option" onclick="checkAnswer(8, 1)">B. Albert Einstein</div>
+                <div class="option" onclick="checkAnswer(8, 0)">C. Galileo Galilei</div>
+                <div class="option" onclick="checkAnswer(8, 0)">D. Stephen Hawking</div>
+            </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="quiz">
+            <div class="question">9. Which gas makes up the majority of Earth's atmosphere?</div>
+            <div class="options">
+                <div class="option" onclick="checkAnswer(9, 0)">A. Oxygen</div>
+                <div class="option" onclick="checkAnswer(9, 1)">B. Nitrogen</div>
+                <div class="option" onclick="checkAnswer(9, 0)">C. Carbon Dioxide</div>
+                <div class="option" onclick="checkAnswer(9, 0)">D. Hydrogen</div>
+            </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="quiz">
+            <div class="question">10. Who wrote the play "Hamlet"?</div>
+            <div class="options">
+                <div class="option" onclick="checkAnswer(10, 0)">A. Charles Dickens</div>
+                <div class="option" onclick="checkAnswer(10, 1)">B. William Shakespeare</div>
+                <div class="option" onclick="checkAnswer(10, 0)">C. Jane Austen</div>
+                <div class="option" onclick="checkAnswer(10, 0)">D. Leo Tolstoy</div>
+            </div>
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        let score = 0;
+
+        function checkAnswer(questionNumber, answer) {
+            if (answer === 1) {
+                score++;
+            }
+
+            const questionDiv = document.querySelectorAll('.quiz')[questionNumber - 1];
+            const options = questionDiv.querySelectorAll('.option');
+            
+            for (let i = 0; i < options.length; i++) {
+                options[i].removeAttribute('onclick');
+            }
+
+            if (questionNumber === 10) {
+                displayResult();
+            }
+        }
+
+        function displayResult() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `<p>Your score: ${score} out of 10</p>`;
+        }
+    </script>
+</body>
+</html>
+
